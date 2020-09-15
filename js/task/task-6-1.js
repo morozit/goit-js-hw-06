@@ -1,3 +1,4 @@
+console.log("Задача 6-1");
 const users = [
   {
     id: "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
@@ -84,7 +85,7 @@ const users = [
     age: 39,
   },
 ];
-console.log("Задача 6-1");
+
 // const getUserNames = users => users.map(user => user.name);
 
 const getUserNames = (users) => users.map(({ name }) => name);
