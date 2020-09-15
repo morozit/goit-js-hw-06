@@ -1,3 +1,4 @@
+console.log("Задача 6-3");
 const users = [
   {
     id: "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
@@ -85,17 +86,10 @@ const users = [
   },
 ];
 
-const getUsersWithGender = (array, genderS) =>
-  array.map(({ name }) => name) &&
-  array.filter(({ gender }) => gender === genderS);
+const getUsersWithGender = (array, genders) =>
+  array.filter(({ gender }) => gender === genders).map(({ name }) => name);
 
 console.log(getUsersWithGender(users, "male"));
-
-// const getUsersWithGender = (array, gender) =>
-//   array.map(({ name }) => name) ||
-//   array.filter(({ gender }) => gender === genderS);
-
-// console.log(getUsersWithGender(users, "male"));
 
 /* [
   "Moore Hensley",
