@@ -85,9 +85,17 @@ const users = [
   },
 ];
 
-const getUsersWithGender = (array, gender) => array;
+const getUsersWithGender = (array, genderS) =>
+  array.map(({ name }) => name) &&
+  array.filter(({ gender }) => gender === genderS);
 
 console.log(getUsersWithGender(users, "male"));
+
+// const getUsersWithGender = (array, gender) =>
+//   array.map(({ name }) => name) ||
+//   array.filter(({ gender }) => gender === genderS);
+
+// console.log(getUsersWithGender(users, "male"));
 
 /* [
   "Moore Hensley",
