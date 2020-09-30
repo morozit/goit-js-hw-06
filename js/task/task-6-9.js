@@ -1,5 +1,6 @@
 console.log("Задача 6-9");
 
+// TODO: variant-1
 const users = [
   {
     id: "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
@@ -94,3 +95,12 @@ const getNamesSortedByFriendsCount = (array) =>
 
 console.log(getNamesSortedByFriendsCount(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
+
+// TODO: variant-2
+const getNamesSortedByFriendsCount = (array) =>
+  [...array]
+    .sort(
+      (prevCountOfFriends, nextCountOfFriends) =>
+        prevCountOfFriends.friends.length - nextCountOfFriends.friends.length
+    )
+    .map(({ name }) => name);
